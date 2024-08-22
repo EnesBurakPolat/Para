@@ -21,8 +21,11 @@ int main() {
 
         int deger;
 
-
-        scanf("%d",&girilen_deger);
+        if (scanf("%d", &girilen_deger) != 1) {
+            printf("Gecersiz giris. Lutfen bir sayi giriniz.\n");
+            while(getchar() != '\n');
+            continue;
+        }
 
         if (girilen_deger == 1) {
             printf("------------------------------------");
